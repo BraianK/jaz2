@@ -5,11 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Strona główna</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-
 </head>
 <body>
 	<div class="container" style="margin-top: 200px; text-align: center">
@@ -28,8 +23,6 @@
 				</form>
 			</div>
 		</div>
-		<div class="alert alert-danger ${errorMessage ? '' : 'collapse'}"
-			style="margin-top: 50px">${errorMessage}</div>
 	</div>
 </body>
 </html>

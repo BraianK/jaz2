@@ -16,7 +16,7 @@ import registration.DummyRegistrationRepository;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String login = request.getParameter("login");
 		Registration registration = new DummyRegistrationRepository().getRegistrationByLogin(login);

@@ -24,7 +24,7 @@ public class PremiumFilter implements Filter{
 		HttpSession session = httpRequest.getSession();
 		
 		if (session.getAttribute("userData") == null) {
-			request.setAttribute("errorMessage", "Aby skorzystaæ z tej podstrony nale¿y zalogowaæ siê");
+			request.setAttribute("errorMessage", "Aby skorzystaæ z tej podstrony nale¿y siê zalogowaæ");
 			request.getRequestDispatcher("/").forward(request, response);
 		} else {
 			Registration registration = (Registration) session.getAttribute("userData");

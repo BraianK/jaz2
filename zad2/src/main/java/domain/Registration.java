@@ -46,6 +46,4 @@ public class Registration {
 	public void setIsAdmin(Boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
-	
-	
 }
