@@ -2,8 +2,6 @@ package registration;
 
 import java.util.List;
 
-import domain.Registration;
-
 public interface RegistrationRepository {
 	Registration getRegistrationByLogin (String login);
 	Boolean checkPassword (String login, String password);

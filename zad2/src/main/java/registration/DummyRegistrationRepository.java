@@ -4,12 +4,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import domain.Registration;
-
 
 public class DummyRegistrationRepository implements RegistrationRepository {
 	private static List<Registration> db = new ArrayList<Registration>();
-
+	
+	
+	
+	
+	 static{
+		 Registration user = new Registration();
+		 user.setName("admin");
+		 user.setEmail("admin@admin.pl");
+		 user.setIsAdmin(true);
+		 user.setIsPremium(true);
+		 user.setLogin("admin");
+		 user.setPassword("admin");
+		 db.add(user);
+	 }
 	@Override
 	public Registration getRegistrationByLogin(String login) {
 		for (Registration registration : db) {

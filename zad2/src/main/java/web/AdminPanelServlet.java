@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import domain.Registration;
 import registration.DummyRegistrationRepository;
+import registration.Registration;
 
 @WebServlet("/adminPanel")
 public class AdminPanelServlet extends HttpServlet {

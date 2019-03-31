@@ -1,4 +1,4 @@
-package domain;
+package registration;
 
 public class Registration {
 	private String name;

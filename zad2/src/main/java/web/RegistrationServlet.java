@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //import javax.servlet.http.HttpSession;
 
-import domain.Registration;
 import registration.DummyRegistrationRepository;
+import registration.Registration;
 import registration.RegistrationRepository;
 
 @WebServlet("/registration")
@@ -22,13 +22,9 @@ public class RegistrationServlet extends HttpServlet {
 
 		Registration registration = retrieveRegistrationFromRequest(request);
 		RegistrationRepository repository = new DummyRegistrationRepository();
-		if(registration.getLogin().equals("admin")) {
-			registration.setIsAdmin(true);
-		} else {
-			registration.setIsAdmin(false);
-		}
+		
 		registration.setIsPremium(false);
-
+		registration.setIsAdmin(false);
 		repository.add(registration);
 		response.sendRedirect("login.jsp");
 
