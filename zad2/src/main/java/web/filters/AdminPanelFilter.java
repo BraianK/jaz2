@@ -30,7 +30,7 @@ public class AdminPanelFilter implements Filter{
 			if (registration.getIsAdmin()) {
 				chain.doFilter(request, response);				
 			} else {
-				request.setAttribute("errorMessage", "Nie masz wymagancyh uprawnieñ aby skorzystaæ z tej podstrony");
+				request.setAttribute("errorMessage", "Nie masz premium!");
 				request.getRequestDispatcher("/").forward(request, response);
 			}
 		}	

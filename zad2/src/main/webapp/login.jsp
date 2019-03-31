@@ -4,29 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
-	<div class="container" style="margin-top: 50px;">
-		<div class="card" style="width: 50%; margin: auto;">
-			<div class="card-body">
-				<form action="login" method="get">
-					<div class="form-group">
-						<label>Login:</label><input class="form-control" type="text"
-							id="login" name="login" />
-					</div>
-					<div class="form-group">
-						<label>Hasło:</label><input class="form-control" type="password"
-							id="password" name="password" />
-					</div>
-					<input class="btn btn-primary btn-block" type="submit" name="loginButton"
-						value="wyslij">
-
-				</form>
-				<div class="alert alert-danger ${errorMessage ? '' : 'collapse'}"
-					style="margin-top: 50px">${errorMessage}</div>
-			</div>
+	<form action="login" method="get">
+		<div>
+			<label>Login:</label><input type="text" id="login" name="login" />
 		</div>
-	</div>
+		<div>
+			<label>Hasło:</label><input type="password" id="password" name="password" />
+		</div>
+			<input type="submit" name="loginButton" value="wyslij">
+	</form>
+		<div>
+		${errorMessage}
+		</div>		
 </body>
 </html>

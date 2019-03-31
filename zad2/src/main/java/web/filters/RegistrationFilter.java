@@ -69,10 +69,10 @@ public class RegistrationFilter implements Filter {
 			return "Uzupe³nij wymagane pola";
 		}
 		if (!password.equals(passwordConfirm)) {
-			return "Podane has³a rózni¹ siê";
+			return "Ró¿ne has³a!";
 		}
 		if (new DummyRegistrationRepository().getRegistrationByLogin(login) != null) {
-			return "U¿ytkownik o takim loginie ju¿ istnieje";
+			return "Login zajêty!";
 		}
 		return "ok";
 	}

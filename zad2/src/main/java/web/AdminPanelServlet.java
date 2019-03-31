@@ -18,7 +18,6 @@ public class AdminPanelServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		if (request.getParameter("saveData") != null) {		
-			request.getParameterMap();
 			String[] loginList = request.getParameterValues("login");
 			String[] checkedList = request.getParameterValues("isPremium") != null ? request.getParameterValues("isPremium") : new String[0];
 			new DummyRegistrationRepository().updatePremiumStatus(loginList, checkedList);

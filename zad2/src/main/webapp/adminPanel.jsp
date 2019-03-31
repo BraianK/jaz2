@@ -6,41 +6,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
 </head>
 <body>
-	<div class="container" style="margin-top: 50px;">
-		<div class="card" style="width: 75%; margin: auto;">
-			<div class="card-body">
-				<form action="adminPanel" method="get">
-					<table class="table table-bordered" >
-						<tr>
-							<th>Imię</th>
-							<th>Login</th>
-							<th>Email</th>
-							<th>Premium</th>
-						</tr>
-						<c:forEach items="${userList}" var="element">
-							<tr>
-								<td><input type="text" class="form-control" readonly="readonly"
-									value="${element.name}" /></td>
-								<td><input class="form-control" type="text" readonly="readonly" name="login"
-									value="${element.login}" /></td>
-								<td><input class="form-control" type="text" readonly="readonly"
-									value="${element.email}" /></td>
-								<td><input type="checkbox" name="isPremium"
-									<c:if test="${element.isPremium}">checked</c:if>
-									value="${element.login}"><br></td>
-							</tr>
-						</c:forEach>
-
-					</table>
-					<input type="submit" class="btn btn-primary btn-block"
-						name="saveData" value="Zapisz zmiany">
-				</form>
-			</div>
-		</div>
-	</div>
+	<form action="adminPanel" method="get">
+		<table>
+			<tr>
+				<th>Imię</th>
+				<th>Login</th>
+				<th>Email</th>
+				<th>Premium</th>
+			</tr>
+			<c:forEach items="${userList}" var="element">
+			<tr>
+			<td><input type="text" value="${element.name}" /></td>
+			<td><input type="text" name="login" value="${element.login}" /></td>
+			<td><input type="text" value="${element.email}" /></td>
+			<td><input type="checkbox" name="isPremium" <c:if test="${element.isPremium}">checked</c:if> value="${element.login}"><br></td>
+			</tr></c:forEach>
+		</table>
+			<input type="submit" name="saveData" value="Zapisz">
+	</form>
 </body>
 </html>
 

@@ -4,15 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
 </head>
 <body>
-	<div class="container" style="margin-top: 50px; text-align: center">
-		<div class="card">
-			<div class="card-body">
-				<div class="alert alert-success"><h1>Witaj wybrańcu premium</h1></div>
-			</div>
-		</div>
-	</div>
+<div><h1>Uprawnienia premium</h1></div>	
 </body>
 </html>
